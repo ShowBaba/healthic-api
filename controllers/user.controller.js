@@ -1,18 +1,17 @@
 /* eslint-disable no-shadow */
-const passport = require('passport');
 const User = require('../models/model.user');
-const { tokenBlacklist } = require('../models/tokenBlacklist');
+const tokenBlacklist = require('../models/tokenBlacklist');
 
 const { hashPassword, jwtToken, comparePassword } = require('../utils');
 
 exports.signup = async (req, res, next) => {
   try {
     const {
-      firstname, lastname, email, password
+      firstname, lastname, email, password, DOB, gender
     } = req.body;
     const hash = hashPassword(password);
     const user = await User.create({
-      firstname, lastname, email, password: hash
+      firstname, lastname, DOB, gender, email, password: hash
     });
     const { id } = user;
     res.statusCode = 201;
@@ -21,7 +20,7 @@ exports.signup = async (req, res, next) => {
       success: true,
       message: 'Registration Successful!',
       user: {
-        id, firstname, lastname, email
+        id, firstname, lastname, email, DOB, gender
       },
     });
   } catch (error) {
@@ -33,7 +32,6 @@ exports.login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
     const user = await User.find({ email });
-    console.log(user.length)
     if (user.length !== 0 && comparePassword(password, user[0].password)) {
       const token = jwtToken.createToken(user);
       res.statusCode = 200;
@@ -52,8 +50,15 @@ exports.login = async (req, res, next) => {
   }
 };
 
-exports.logout = async (req, res) => {
-  delete req.session;
-  req.logOut();
-  return res.redirect('/');
+exports.logout = async (req, res, next) => {
+  try {
+    const token = req.headers.authorization.split(' ')[1];
+    await tokenBlacklist.create({ token });
+    res.json({
+      status: 'success',
+      message: 'User signed out',
+    });
+  } catch (error) {
+    next(error);
+  }
 };

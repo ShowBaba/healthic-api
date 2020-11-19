@@ -46,7 +46,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 const localUrl = config.mongoUrl;
 // eslint-disable-next-line no-unused-vars
 const liveUrl = process.env.DB_CONNECTION;
-// replace liveUrl with localUrl to use local mongodb
 const connect = mongoose.connect(liveUrl, {
   useUnifiedTopology: true,
   useNewUrlParser: true,

@@ -12,6 +12,15 @@ const User = new Schema({
     type: String,
     required: true,
   },
+  DOB: {
+    type: Date,
+    required: true,
+    trim: true,
+  },
+  gender: {
+    type: String,
+    required: true,
+  },
   email: {
     type: String,
     required: true,
