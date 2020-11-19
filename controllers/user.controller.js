@@ -7,11 +7,11 @@ const { hashPassword, jwtToken, comparePassword } = require('../utils');
 exports.signup = async (req, res, next) => {
   try {
     const {
-      firstname, lastname, email, password
+      firstname, lastname, email, password, DOB, gender
     } = req.body;
     const hash = hashPassword(password);
     const user = await User.create({
-      firstname, lastname, email, password: hash
+      firstname, lastname, DOB, gender, email, password: hash
     });
     const { id } = user;
     res.statusCode = 201;
@@ -20,7 +20,7 @@ exports.signup = async (req, res, next) => {
       success: true,
       message: 'Registration Successful!',
       user: {
-        id, firstname, lastname, email
+        id, firstname, lastname, email, DOB, gender
       },
     });
   } catch (error) {
