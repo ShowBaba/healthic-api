@@ -12,6 +12,7 @@ dotenv.config();
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const appointmentRouter = require('./routes/route.appointment');
 
 const app = express();
 
@@ -35,6 +36,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/v1', indexRouter);
 app.use('/api/v1/users', usersRouter);
+app.use('/api/v1/appointment', appointmentRouter);
 
 // set up a wildcard route
 app.get('*', (req, res) => {
@@ -43,8 +45,8 @@ app.get('*', (req, res) => {
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-const localUrl = config.mongoUrl;
 // eslint-disable-next-line no-unused-vars
+const localUrl = config.mongoUrl;
 const liveUrl = process.env.DB_CONNECTION;
 const connect = mongoose.connect(liveUrl, {
   useUnifiedTopology: true,

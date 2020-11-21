@@ -11,7 +11,7 @@
 
 - [NodeJS](https://nodejs.org/en/)
 - [Express](https://expressjs.com/)
-- [PostgreSQL](https://www.mongodb.com/)
+- [MongoDB](https://www.mongodb.com/)
 - [ESLint](https://eslint.org/) (Linting Library)
 - [Mocha](https://mochajs.org/) (Testing Framework)
 
