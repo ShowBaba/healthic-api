@@ -48,7 +48,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // eslint-disable-next-line no-unused-vars
 const localUrl = config.mongoUrl;
 const liveUrl = process.env.DB_CONNECTION;
-const connect = mongoose.connect(liveUrl, {
+const connect = mongoose.connect(localUrl, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
   useFindAndModify: false,
