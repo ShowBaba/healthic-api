@@ -31,7 +31,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(passport.initialize());
 
 app.get('/api/v1', (req, res) => {
-  res.json({ status: 'success', message: 'Welcome To MyDiary API' });
+  res.json({ status: 'success', message: 'Welcome To Healthic API' });
 });
 
 // app.get('/', (req, res) => {
