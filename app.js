@@ -29,14 +29,30 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(passport.initialize());
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/api/v1', (req, res) => {
   res.json({ status: 'success', message: 'Welcome To Healthic API' });
 });
 
-// app.get('/', (req, res) => {
-//   res.redirect('/api/v1');
-// });
+app.get('/index', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/pages/index.html'));
+});
+app.get('/about', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/pages/about.html'));
+});
+app.get('/services', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/pages/services.html'));
+});
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/pages/login.html'));
+});
+app.get('/signup', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/pages/signup.html'));
+});
+app.get('/blog', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/pages/blog.html'));
+});
 
 app.use('/api/v1', indexRouter);
 app.use('/api/v1/users', usersRouter);
@@ -44,10 +60,8 @@ app.use('/api/v1/appointment', appointmentRouter);
 
 // set up a wildcard route
 app.get('*', (req, res) => {
-  res.redirect('/api/v1');
+  res.redirect('/index');
 });
-
-app.use(express.static(path.join(__dirname, 'public')));
 
 // eslint-disable-next-line no-unused-vars
 const localUrl = config.mongoUrl;
@@ -67,7 +81,7 @@ connect.then(
   },
   (err) => {
     console.log(err);
-  },
+  }
 );
 
 // catch 404 and forward to error handler

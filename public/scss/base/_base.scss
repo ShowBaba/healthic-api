@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    object-fit: cover;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: get-color('white');
+    text-decoration: none;
+}
+
+h2 {
+    @extend %text-center;
+    @extend %text-uppercase;
+
+    color: get-color('light-blue');
+}
+
+figcaption {
+    color: get-color('dark-gray');
+}
