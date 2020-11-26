@@ -1,8 +1,8 @@
 <a href="" target="_blank"><p align="center">
-  <img src="public/images/write_64.png" alt="MyDiary App logo">
+  <img src="public/images/icon.png" alt="App logo">
 </p></a>
-<h2 align="center">⭐ Pregnosis API⭐</h2>
-<h4 align="center">Pregnosis is an app that provide information for pregnant women</h4>
+<h2 align="center">⭐ Healthic API⭐</h2>
+<h4 align="center">Healthic is an app that provide information health informations</h4>
 <br>
 
 ## Stack Overview

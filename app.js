@@ -12,6 +12,7 @@ dotenv.config();
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const appointmentRouter = require('./routes/route.appointment');
 
 const app = express();
 
@@ -29,12 +30,17 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(passport.initialize());
 
-app.get('/', (req, res) => {
-  res.redirect('/api/v1');
+app.get('/api/v1', (req, res) => {
+  res.json({ status: 'success', message: 'Welcome To Healthic API' });
 });
+
+// app.get('/', (req, res) => {
+//   res.redirect('/api/v1');
+// });
 
 app.use('/api/v1', indexRouter);
 app.use('/api/v1/users', usersRouter);
+app.use('/api/v1/appointment', appointmentRouter);
 
 // set up a wildcard route
 app.get('*', (req, res) => {
@@ -43,8 +49,8 @@ app.get('*', (req, res) => {
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-const localUrl = config.mongoUrl;
 // eslint-disable-next-line no-unused-vars
+const localUrl = config.mongoUrl;
 const liveUrl = process.env.DB_CONNECTION;
 const connect = mongoose.connect(liveUrl, {
   useUnifiedTopology: true,

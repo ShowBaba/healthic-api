@@ -11,37 +11,30 @@ dotenv.config();
 module.exports = async (req, res, next) => {
   if (!req.headers.authorization) {
     return res.status(401).send({
-      error: 'You are not authorized to access this resource'
+      error: 'You are not authorized to access this resource',
     });
   }
   const token = req.headers.authorization.split(' ')[1];
   // check if a token is in the black list db
   try {
     const result = await tokenBlacklist.find({ token });
-    // return result;
-    if (result !== null) {
+    if (result.length !== 0) {
       return res.status(401).send({
-        error: 'User already logged out of session'
+        error: 'User already logged out of session',
       });
     }
-    jwt.verify(token, process.env.secretKey, { expiresIn: 3600 },
-      (err, decoded) => {
+
+    jwt.verify(
+      token,
+      process.env.secretKey,
+      { expiresIn: 86400 }, // expires in 1hr
+      (err) => {
         if (err) {
-          return res.status(401).send({
-            error: err
-          });
+          return res.sendStatus(401);
         }
-        req.decoded = decoded;
-        User.findByPk(decoded.id)
-          .then((user) => {
-            if (!user) {
-              return res.status(401).send({
-                error: 'User does not exist'
-              });
-            }
-            next();
-          });
-      });
+        next();
+      }
+    );
   } catch (error) {
     next(error);
   }

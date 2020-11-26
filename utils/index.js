@@ -19,8 +19,4 @@ exports.hashPassword = (password) => bcrypt.hashSync(password, 10);
 
 exports.comparePassword = (password, hash) => bcrypt.compareSync(password, hash);
 
-// check if a token is in the black list db
-exports.checkInBlacklist = (token) => tokenBlacklist.findOne({
-  where: { token }
-})
-  .then((token) => token);
+
