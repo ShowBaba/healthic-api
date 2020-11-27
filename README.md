@@ -17,8 +17,9 @@
 
 ### Front-End
 
-- HTML + CSS + Javascript
-- SCSS
+- HTML
+- SCSS 
+- Javascript
 
 ## Pages
 [Homepage](https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/index)<br />
