@@ -21,10 +21,10 @@
 - SCSS
 
 ## Pages
-[Homepage](https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/index)
-[About](https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/about)
-[Appoinments](https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/appointment)
-[Blog](https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/blog)
-[Sign Up](https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/signup)
-[Login](https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/login)
+[Homepage](https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/index)<br />
+[About](https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/about)<br />
+[Appoinments](https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/appointment)<br />
+[Blog](https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/blog)<br />
+[Sign Up](https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/signup)<br />
+[Login](https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/login)<br />
 [Services](https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/services)
