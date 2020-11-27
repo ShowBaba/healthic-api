@@ -53,6 +53,9 @@ app.get('/signup', (req, res) => {
 app.get('/blog', (req, res) => {
   res.sendFile(path.join(__dirname, './public/pages/blog.html'));
 });
+app.get('/appointment', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/pages/appointments.html'));
+});
 
 app.use('/api/v1', indexRouter);
 app.use('/api/v1/users', usersRouter);
