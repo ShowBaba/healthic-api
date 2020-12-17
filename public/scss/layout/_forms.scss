@@ -16,6 +16,15 @@ a {
     text-decoration: none;
 }
 
+select,
+option {
+    font-size: 1rem;
+}
+
+select {
+    padding: .25em .5em;
+}
+
 .form {
     &-section {
         @include container(1.5em);
