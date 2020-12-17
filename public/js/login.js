@@ -35,7 +35,8 @@ const validateFormInputs = async (event) => {
                 if (errorMessageElement.classList.contains('display-block')) {
                     errorMessageElement.classList.remove('display-block');
                 }
-                // window.location.replace('');
+                window.location.href = 'https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/index';
+
             } else {
                 errorMessageElement.classList.add('display-block');
             }

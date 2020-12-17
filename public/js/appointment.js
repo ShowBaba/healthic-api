@@ -29,9 +29,7 @@ const validateFormInputs = async (event) => {
             const jsonResponse = await response.json();
             console.log(jsonResponse);
             if (jsonResponse.success) {
-                window.location.replace(
-                    'https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/pages/success.html'
-                );
+                window.location.href = 'https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/pages/success.html';
             }
             console.log(jsonResponse.message);
         } catch (error) {
