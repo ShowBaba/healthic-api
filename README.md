@@ -2,7 +2,7 @@
   <img src="public/images/icon.png" alt="App logo">
 </p></a>
 <h2 align="center">⭐ Healthic API⭐</h2>
-<h4 align="center">Healthic is an app that provides access to quality healthcare services using. Seasoned with renowned health practitioners.</h4>
+<h4 align="center">Healthic is an app that provides access to quality healthcare services. Seasoned with renowned health practitioners.</h4>
 <br>
 
 ## Stack Overview
