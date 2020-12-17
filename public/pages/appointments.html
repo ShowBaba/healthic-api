@@ -45,9 +45,9 @@
                         >
                         <input
                             id="patient-name"
-                            class="form-input"
+                            class="form-input validate"
                             type="text"
-                            name="patient-name validate"
+                            name="patientName"
                             pattern="^[a-zA-Z-]+$"
                             required
                             aria-required="true"
@@ -73,7 +73,7 @@
                             id="phone-number"
                             class="form-input validate"
                             type="number"
-                            name="phone-number"
+                            name="phone"
                             pattern="^\+(?:[0-9] ?){6,14}[0-9]$"
                             required
                             aria-required="true"
@@ -87,7 +87,7 @@
                             id="appointment-time"
                             class="form-input validate"
                             type="time"
-                            name="appointment-time"
+                            name="timeOfAvailability"
                             required
                             aria-required="true"
                         />
@@ -100,7 +100,7 @@
                             id="appointment-date"
                             class="form-input validate"
                             type="date"
-                            name="appointment-date"
+                            name="date"
                             required
                             aria-required="true"
                         />
@@ -112,7 +112,7 @@
                         <textarea
                             id="appointment-notes"
                             class="form-input"
-                            name="appointment-notes"
+                            name="note"
                             cols="30"
                             rows="10"
                         ></textarea>

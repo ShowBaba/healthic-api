@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const formElement = document.querySelector('form');
 
 const validatePasswords = () => {
@@ -18,6 +19,7 @@ const validateFormInputs = async (event) => {
     const form = event.target;
     const url = form.action;
     const formData = new FormData(form);
+    // console.log(form);
 
     const user = {};
     formData.forEach((value, key) => {
@@ -25,6 +27,7 @@ const validateFormInputs = async (event) => {
     });
     delete user.terms;
     delete user['confirm-password'];
+    // console.log(JSON.stringify(user));
     try {
       const response = await fetch(url, {
         method: 'POST',
