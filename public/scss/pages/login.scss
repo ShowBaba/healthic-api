@@ -7,3 +7,18 @@
 
 @import '../components/form-input';
 @import '../components/button';
+
+.error-message {
+    background: hsl(240, 100%, 95%);
+    color: hsl(0, 70%, 50%);
+    display: none;
+    font-size: 1.125rem;
+    font-weight: font-weight('medium');
+    margin: 1em 0;
+    padding: .5em;
+    text-align: center;
+}
+
+.display-block {
+    display: block;
+}

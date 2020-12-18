@@ -25,6 +25,15 @@ a {
   text-decoration: none;
 }
 
+select,
+option {
+  font-size: 1rem;
+}
+
+select {
+  padding: .25em .5em;
+}
+
 .form-section {
   margin: 1.5em auto;
   width: 90%;
@@ -134,5 +143,20 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 200px;
+}
+
+.feedback-message {
+  background: #e6e6ff;
+  color: #26d926;
+  display: none;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 1em 0;
+  padding: .5em;
+  text-align: center;
+}
+
+.display-block {
+  display: block;
 }
 /*# sourceMappingURL=signup.css.map */
