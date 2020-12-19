@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ShowBaba/healthic-api.svg?branch=master)](https://travis-ci.org/ShowBaba/healthic-api)
+
 <a href="" target="_blank"><p align="center">
   <img src="public/images/icon.png" alt="App logo">
 </p></a>
