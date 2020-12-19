@@ -22,10 +22,10 @@
 - Javascript
 
 ## Pages
-[Homepage](https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/index)<br />
-[About](https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/about)<br />
-[Appoinments](https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/appointment)<br />
-[Blog](https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/blog)<br />
-[Sign Up](https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/signup)<br />
-[Login](https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/login)<br />
-[Services](https://sokoto-gudu-5fb7c8add85c50070e7c411c.simplifyd.app/services)
+[Homepage](https://https://healthic.herokuapp.com/pages/index)<br />
+[About](https://https://healthic.herokuapp.com/pages/about)<br />
+[Appoinments](https://https://healthic.herokuapp.com/pages/appointment)<br />
+[Blog](https://https://healthic.herokuapp.com/pages/blog)<br />
+[Sign Up](https://https://healthic.herokuapp.com/pages/signup)<br />
+[Login](https://https://healthic.herokuapp.com/pages/login)<br />
+[Services](https://https://healthic.herokuapp.com/pages/services)
